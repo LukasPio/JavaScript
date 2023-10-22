@@ -1,0 +1,15 @@
+{
+  "name": "npx_scriptnpm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "hello": "jorge henrique",
+    "start": "node index.js"
+  },
+  "author": "lucasPio",
+  "license": "ISC",
+  "dependencies": {
+    "hello-world-npm": "^1.1.1"
+  }
+}

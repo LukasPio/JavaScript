@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Cadastro de DEVs</title>
+  <script src="index.js" defer></script>
+  <style>
+* {
+  transition: 0.6s;
+}
+
+    .dark {
+      color: #000000;
+      background-color: #FFFFFF;
+    }
+
+    .light {
+      color: #FFFFFF;
+      background-color: #000000;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Exercício 12 - Cadastro de Devs</h1>
+
+  <hr>
+
+  <button id="dark">Dark Theme</button>
+  <button onclick="light()">Light Theme</button>
+  <button id='togle'>Toggle Theme</button>
+
+  <h3>Cadastrar Novo Desenvolvedor</h3>
+
+  <label for="userName">Nome Completo do DEV: </label>
+  <input type="text" id="userName">
+
+  <h4>Tecnologia:</h4>
+
+  <button onclick="adicionarTec()">Adicionar nova tecnologia</button> <br>
+
+  <ul id="tecnologias">
+
+  </ul> <br>
+
+  <button onclick="cadastrar()">Cadastrar</button>
+
+
+
+</body>
+
+</html>

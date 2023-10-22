@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>test</title>
+</head>
+
+<body>
+  <input type="text" id="input">
+  <button id="change">Mudar valor</button>
+
+  <script defer>
+    const input = document.getElementById('input')
+    document.getElementById('change').addEventListener('click', function () {
+      input.value === '' ? input.value = 'jorge' : input.value = ''
+    })
+  </script>
+</body>
+
+</html>

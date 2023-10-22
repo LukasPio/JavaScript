@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Nave acelerando</h1>
+
+  <script>
+    let confirma
+    let naveVel = 0
+    const nome = prompt("Digite seu nome")
+    do {
+      confirma = prompt("Olá piloto " + nome + ", a nave esta em " + naveVel + "km/s, deseja acelerar? (Sim/ Não)")
+      if (confirma === "Sim") {
+        naveVel += parseFloat(prompt("Deseja acelerar em quantos km/s piloto " + nome + "?"))
+      }
+    } while (confirma != "Não")
+    alert("Você não acelerou sua nave! então morreu")
+  </script>
+</body>
+
+</html>

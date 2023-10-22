@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <title>Exercicio final</title>
+</head>
+
+<body>
+
+  <h1>Exercicio final pogs!</h1>
+
+
+  <script>
+
+    const vagas = []
+
+    function listarVagas() {
+      const vagasTexto = vagas.reduce(function (textoFinal, vaga, indice) {
+        textoFinal += indice + ". ";
+        textoFinal += vaga.nome;
+        textoFinal += " (" + vaga.candidatos.length + " candidatos)\n";
+        return textoFinal;
+      }, "");
+      alert(vagasTexto);
+    }
+
+    function novaVaga() {
+
+      const nome = prompt("Informe um nome para a vaga:");
+      const descricao = prompt("Insira a descricao da vaga:");
+      const data = prompt("Escreva a data limite para a obtencao dessa vaga");
+
+      const confirma = confirm("Tem certeza que quer criar a vaga?\n\n" + "Nome: " + nome + "\nDescricao da vaga: " + descricao + "\nData limite: " + data);
+
+      if (confirma) {
+        const novaVaga = { nome, descricao, data, candidatos: [] };
+        vagas.push(novaVaga);
+        alert("Vaga criada.");
+      }
+      else {
+        alert("A criação da vaga foi cancelada!");
+      }
+    }
+
+    function visualizarVaga() {
+
+      const indice = prompt("Informe o indice da vaga desejada");
+      if (indice >= vagas.length || indice < 0) {
+        alert("Índice inválido!");
+        return;
+      }
+
+      const vaga = vagas[indice];
+
+      const candidatoTexto = vaga.candidatos.reduce(function (textoFinal, candidato) {
+        return textoFinal + "\n - " + candidato;
+      }, "");
+
+      alert("Vaga numero " + indice +
+        "\nNome: " + vaga.nome +
+        "\nDescricao: " + vaga.descricao +
+        "\nData limite: " + vaga.data +
+        "\nQuantidade de candidatos: " + vaga.candidatos.length +
+        "\nCandidatos inscritos: " + candidatoTexto);
+    }
+
+    /*Crie uma função chamada inscreverCandidato que pede ao usuário o nome do candidato e o índice da vaga em que deseja se inscrever.
+    Em seguida, exiba as informações da vaga e solicite uma confirmação antes de adicionar o candidato à vaga selecionada.*/
+
+    function inscreverCandidato() {
+      const nomeCandidato = prompt("Insira o nome do candidato");
+      const indice = prompt("Qual é o índice da vaga em que você deseja se inscrever?");
+      const vaga = vagas[indice];
+
+      const candidatosTexto = vaga.candidatos.reduce(function (texto, candidato) {
+        return texto + "\n- " + candidato;
+      }, "");
+
+      const confirma = confirm("Tem certeza que quer inscrever " + nomeCandidato + " como um candidato nessa vaga?" +
+        "Índice da vaga: " + indice +
+        "\nNome: " + vaga.nome +
+        "\nDescricao: " + vaga.descricao +
+        "\nData limite: " + vaga.data +
+        "\nQuantidade de candidatos: " + vaga.candidatos.length +
+        "\nCandidatos inscritos: " + candidatosTexto);
+      if (confirma) {
+        alert("O candidato foi inscrito!");
+        vaga.candidatos.push(nomeCandidato);
+      }
+      else {
+        alert("A inscrição foi cancelada");
+      }
+    }
+
+    /*Crie uma função chamada excluirVaga que solicita ao usuário o índice da vaga que deseja excluir. 
+    Exiba as informações dessa vaga e solicite uma confirmação antes de remover a vaga do array vagas.*/
+
+    function excluirVaga() {
+      const indice = prompt("Qual é o índice da vaga que você deseja excluir?");
+      const vaga = vagas[indice];
+
+      vagas.splice(indice, 1);
+      alert("A vaga foi excluída!");
+    }
+
+    /*Crie uma função chamada menu que exibe as opções disponíveis ao usuário: 
+    (listar vagas, criar nova vaga, visualizar vaga, inscrever candidato, excluir vaga, sair) e solicita que ele escolha uma opção. 
+    Dependendo da opção selecionada, chame a função correspondente.*/
+
+
+    let opcao;
+
+    do {
+
+      opcao = prompt("Olá, o que deseja fazer?" +
+        "\n1- Listar vagas disponíveis" +
+        "\n2- Criar uma nova vaga" +
+        "\n3- Visualizar uma vaga" +
+        "\n4- Inscrever um candidato em uma vaga" +
+        "\n5- Excluir uma vaga" +
+        "\n6- Sair");
+
+      switch (opcao) {
+
+        case '1':
+          listarVagas();
+          break;
+
+        case '2':
+          novaVaga();
+          break;
+
+        case '3':
+          visualizarVaga();
+          break;
+
+        case '4':
+          inscreverCandidato();
+          break;
+
+        case '5':
+          excluirVaga();
+          break;
+
+        case '6':
+          alert("O programa está sendo encerrado...");
+          break;
+
+        default:
+          alert("Opção inválida!");
+      }
+
+
+    } while (opcao !== '6');
+
+    alert("Programa encerrado!");
+
+  </script>
+</body>
+
+</html>

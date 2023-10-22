@@ -1,0 +1,6 @@
+alert("Olá, esse é o Cadastro de recrutas, por favor responda as seguintes perguntas:")
+const name1 = window.prompt("Digite seu primeiro nome")
+const name2 = window.prompt("Digite seu segundo nome")
+const study = window.prompt("Seu campo de estudo")
+const data = window.prompt("Em que ano você nasceu?")
+alert("Esses são os dados do seu cadastro: " + "\nNome completo: " + name1 + " " + name2 + "\nSeu campo de estudo é: " + study + "\nVocê tem " + (2023 - data) + " anos de idade") 

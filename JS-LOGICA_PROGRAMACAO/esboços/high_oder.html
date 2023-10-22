@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Plino</h1>
+
+
+  <script>
+
+    // .filter (High order para filtrar elementos de forma personalizada)
+
+    /*const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+   const pares = numeros.filter(function (numeros) {
+     if (numeros % 2 === 0) {
+       return numeros
+     }
+   })
+   console.log(pares)*/
+
+
+    // .map (High order para exibir todos os elementos de objeto de mesma nomeclatura)
+
+    /*const salgados = [
+      { nome: "coxinha", preco: '10', recheio: 'frango' },
+      { nome: "Joelho", preco: '12', recheio: 'queijo e presunto' },
+      { nome: "Pastel", preco: '15', recheio: 'carne moida' },
+      { nome: "Pao de queijo", preco: '17', recheio: 'frango' }
+    ]
+
+    const salgadosDisponiveis = salgados.map(function (salgados) {
+      return salgados.nome
+    })
+
+    console.log(salgadosDisponiveis)*/
+
+
+    // Reduce (High order para agrupar dados por um filtro específico)
+
+    /*const salgados = [
+      { nome: "coxinha", preco: 10, recheio: 'frango' },
+      { nome: "Joelho", preco: 12, recheio: 'queijo e presunto' },
+      { nome: "Pastel", preco: 17, recheio: 'carne moida' },
+      { nome: "Pao de queijo", preco: 17, recheio: 'frango' },
+      { nome: "coxinha", preco: 10, recheio: 'frango' },
+      { nome: "coxinha", preco: 10, recheio: 'frango' },
+      { nome: "coxinha", preco: 10, recheio: 'frango' },
+      { nome: "coxinha", preco: 10, recheio: 'frango' },
+      { nome: "coxinha", preco: 10, recheio: 'frango' }
+    ]*/
+
+    /*const precoTotal = salgados.reduce(function (valorAcumulado, salgados) {
+      return valorAcumulado + salgados.preco
+    }, 0)
+
+    console.log(precoTotal)*/
+
+    /*const preco = salgados.reduce(function (valorAcumulado, salgados) {
+      if (valorAcumulado[salgados.preco]) {
+        valorAcumulado[salgados.preco].push(salgados)
+      } else {
+        valorAcumulado[salgados.preco] = [salgados]
+      }
+      return valorAcumulado
+    }, {})
+
+    console.log(preco) */
+
+
+    // Sort (High order para organizar elemtos de uma array em ordem crescente/decrescente.)
+
+    /*const salgados = [
+      { nome: "coxinha", preco: 10, recheio: 'frango' },
+      { nome: "Joelho", preco: 12, recheio: 'queijo e presunto' },
+      { nome: "Pastel", preco: 13, recheio: 'carne moida' },
+      { nome: "Pao de queijo", preco: 17, recheio: 'frango' },
+      { nome: "coxinha", preco: 16, recheio: 'frango' },
+      { nome: "coxinha", preco: 19, recheio: 'frango' },
+      { nome: "coxinha", preco: 14, recheio: 'frango' },
+      { nome: "coxinha", preco: 14, recheio: 'frango' },
+      { nome: "coxinha", preco: 8, recheio: 'frango' }
+    ]
+
+
+    salgados.sort(function (a, b) {
+      return b.preco - a.preco
+    }) //caso queira que o sort não afete a array original, basta por um .slice depois do array (salgados.slice().sort)
+
+    console.log(salgados)*/
+  </script>
+
+
+</body>
+
+</html>
