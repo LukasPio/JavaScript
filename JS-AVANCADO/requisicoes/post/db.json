@@ -1,0 +1,40 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "title": "Olá, mundo!",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam minus inventore voluptatem, eum repellat sed officiis aliquam",
+      "author": "Isaac"
+    },
+    {
+      "id": 2,
+      "title": "Requisições POST com Javascript",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam minus inventore voluptatem, eum repellat sed officiis aliquam",
+      "author": "Isaac"
+    },
+    {
+      "title": "Curso de PHP",
+      "author": "Lucas Pio",
+      "content": "conteudo\r\nfoda\r\ndo\r\ncurso\r\nde\r\nhttp",
+      "id": 3
+    },
+    {
+      "title": "requisição insana",
+      "author": "alguem",
+      "content": "requisição insana omg",
+      "id": 4
+    },
+    {
+      "title": "teste",
+      "author": "testador",
+      "content": "teste sendo testado pelo testador",
+      "id": 5
+    },
+    {
+      "title": "outroTeste",
+      "author": "outroTestador",
+      "content": "Outro teste sendo testado por outro testador",
+      "id": 6
+    }
+  ]
+}
