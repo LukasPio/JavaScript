@@ -1,0 +1,50 @@
+.transactions {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px; /* Espaço entre os itens do grid */
+    max-width: 600px; /* Define a largura máxima do grid, ajuste conforme necessário */
+    margin: 0 auto; /* Centraliza o grid horizontalmente na página */
+    text-align: center;
+    justify-content: center;
+}
+
+.oneTransaction {
+   margin: 30px;
+    border: solid black;
+    width: 220px;
+    text-align: center;
+    background-color: rgb(239, 223, 191);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    border: solid black;
+    padding: 10px;
+}
+
+body {
+    background-color: #ebdcc7;
+}
+
+.requisitonArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.buttonGET {
+    width: 120px;
+    height: 40px;
+}
+
+form > button {
+    margin-top: 10px;
+}
+
+input {
+    text-align: center;
+}

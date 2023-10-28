@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="requisitonArea">
+     <!-- <button class="buttonGET">GET transactions</button> -->
+        <form class="formPOST">
+            <label for="sender" aria-required="true">Sender name:</label>
+            <input type="text" class="senderPOST">
+
+            <label for="reciever">Reciever name:</label>
+            <input type="text" class="recieverPOST">
+
+            <label for="sender">Transaction value:</label>
+            <input type="text" class="valuePOST">
+
+            <button class="buttonPOST" type="submit">POST</button>
+        </form>
+        
+        <form class="formPUT">
+            <label for="sender" aria-required="true">Sender name:</label>
+            <input type="text" class="senderPUT">
+
+            <label for="reciever">Reciever name:</label>
+            <input type="text" class="recieverPUT">
+
+            <label for="sender">Transaction value:</label>
+            <input type="text" class="valuePUT">
+
+            <label for="sender">Transaction id:</label>
+            <input type="text" class="idPUT">
+
+            <button class="buttonPUT" type="submit">PUT</button>
+        </form>
+
+        <form class="formDELETE">
+            <label for="sender" aria-required="true">Transaction id:</label>
+            <input type="text" class="transactionID">
+
+            <button class="buttonPOST">DELETE</button>
+        </form>
+    </div>
+
+    <div class="transactions">
+    </div>
+</body>
+</html>
